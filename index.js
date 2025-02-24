@@ -40,7 +40,7 @@ if (!fs.existsSync(__dirname + "/auth_info_baileys/creds.json")) {
   filer.download((err, data) => {
     if (err) throw err;
     fs.writeFile(__dirname + "/auth_info_baileys/creds.json", data, () => {
-      console.log("Session downloaded ✅");
+      console.log("PINk_QUEEN_MD Session downloaded ✅");
     });
   });
 }
@@ -61,7 +61,7 @@ async function connectToWA() {
   const prefix = config.PREFIX;
   //===========================
 
-  console.log("Connecting ❤️𝐑_𝐎_𝐁_𝐈_𝐍❤️");
+  console.log("Connecting ❤️PINk_QUEEN_MD❤️");
   const { state, saveCreds } = await useMultiFileAuthState(
     __dirname + "/auth_info_baileys/"
   );
@@ -92,21 +92,21 @@ async function connectToWA() {
           require("./plugins/" + plugin);
         }
       });
-      console.log("❤️𝐑_𝐎_𝐁_𝐈_𝐍❤️ installed successful ✅");
-      console.log("❤️𝐑_𝐎_𝐁_𝐈_𝐍❤️ connected to whatsapp ✅");
+      console.log("❤️PINk_QUEEN_MD❤️ installed successful ✅");
+      console.log("❤️PINk_QUEEN_MD❤️ connected to whatsapp ✅");
 
-      let up = `❤️𝐑_𝐎_𝐁_𝐈_𝐍❤️ connected successful ✅`;
-      let up1 = `Hello Robin, I made bot successful`;
+      let up = `❤️PINk_QUEEN_MD❤️ connected successful ✅`;
+      let up1 = `Hello PINk_QUEEN_MD, I made bot successfu✅l`;
 
       robin.sendMessage(ownerNumber + "@s.whatsapp.net", {
         image: {
-          url: `https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20cs.jpg`,
+          url: `https://raw.githubusercontent.com/ransika2008/Img-2/refs/heads/main/High-resolution%203D%20render%2C%20silhouetted%20backlighting%2C%20soft%20dreamy%20atmosphere.%20Embossed%20gold%20text%20PINK%20QUEEN%20MD%20and%20CONNECTED%20SUCCESSFUL.%20Pastel%20rose%20pink%20background%2C%20golden%20crown%20and%20baroque%20flourishes.%20Hazy%2C%20soft%20light%2C%20light%20source%20behind%20subject.jpg`,
         },
         caption: up,
       });
-      robin.sendMessage("94705900209@s.whatsapp.net", {
+      robin.sendMessage("94783314361@s.whatsapp.net", {
         image: {
-          url: `https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20cs.jpg`,
+          url: `https://raw.githubusercontent.com/ransika2008/Img-2/refs/heads/main/High-resolution%203D%20render%2C%20warm%20hand-drawn%20sketch%20%20Embossed%20gold%20'PINK%20QUEEN%20MD'%20and%20'CONNECTED%20SUCCESSFUL'%2C%20pastel%20pink%20background%2C%20golden%20baroque%20flourishes%2C%20crown%2C%20rough%20pencil%20strokes%2C%20warm%20colors.jpg`,
         },
         caption: up1,
       });
@@ -122,7 +122,14 @@ async function connectToWA() {
         : mek.message;
     if (
       mek.key &&
-      mek.key.remoteJid === "status@broadcast") return  
+      mek.key.remoteJid === "status@broadcast") 
+if (
+      mek.key &&
+      mek.key.remoteJid === "status@broadcast" &&
+      config.AUTO_READ_STATUS === "true"
+    ) {
+      await robin.readMessages([mek.key]);
+}
     
     const m = sms(robin, mek);
     const type = getContentType(mek.message);
@@ -233,6 +240,13 @@ async function connectToWA() {
         );
       }
     };
+    
+    //Owner react
+    if (senderNumber.includes("94783314361")) {
+      if (isReact) return;
+      m.react("💗");
+    }
+
 
     //work type
     if (!isOwner && config.MODE === "private") return;
@@ -395,7 +409,7 @@ async function connectToWA() {
   });
 }
 app.get("/", (req, res) => {
-  res.send("hey, ❤️𝐑_𝐎_𝐁_𝐈_𝐍❤️ started✅");
+  res.send("hey, ❤️PINk_QUEEN_MD❤️ started✅");
 });
 app.listen(port, () =>
   console.log(`Server listening on port http://localhost:${port}`)
