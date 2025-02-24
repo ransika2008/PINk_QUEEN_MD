@@ -5,6 +5,7 @@ cmd(
   {
     pattern: "menu",
     alise: ["getmenu"],
+    react:"📂",
     desc: "get cmd list",
     category: "main",
     filename: __filename,
@@ -84,15 +85,15 @@ ${menu.group}
 ${menu.search}
 
 
-🥶𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋🥶
+~🥶𝐌𝐚𝐝𝐞 𝐛𝐲 PINk_QUEEN_MD🥶~
 
-> ROBIN MENU MSG
+> PINk_QUEEN_MD MENU MSG
 `;
       await robin.sendMessage(
         from,
         {
           image: {
-            url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20menu.jpg",
+            url: "https://raw.githubusercontent.com/ransika2008/Img-2/refs/heads/main/Bright%2C%20vibrant%20colors%20and%20intense%20dramatic%20lighting%20highlight%20a%203D%20text%20design%20'PINK%20QUEEN%20MD'%20and%20'MENU'%20in%20elegant%2C%20decorative%20gold%20fonts%20with%20reflections.%20A%20rose%20pink%20gradient%20background%20features%20golden%20baroque%20flourishes%20and%20a%20crown.%20High%20contras.jpg",
           },
           caption: madeMenu,
         },
